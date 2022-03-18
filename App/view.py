@@ -4,7 +4,7 @@
  *
  *
  * Desarrolado para el curso ISIS1225 - Estructuras de Datos y Algoritmos
- *
+ * 
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -114,7 +114,14 @@ def printBooksbyTitle(books):
     """
     Completar la descripcion de printBooksbyTitle
     """
-    pass
+    if(books):
+        print('Se encontraron: ' + str(lt.size(books)) + ' Libros')
+        for book in lt.iterator(books):
+            print(book['title'])
+        print("\n")
+    else:
+        print("No se encontraron libros.\n")
+
 
 # Menu de opciones
 
@@ -128,6 +135,7 @@ def printMenu():
     print("5- Consultar los Libros por etiqueta")
     # TODO modificaciones para el laboratorio 6
     # Agregar opcion para el nuevo indice
+    print("6- Consultar los Libros por su nombre")
     print("0- Salir")
 
 
@@ -164,8 +172,10 @@ while True:
         printBooksbyTag(books)
 
     elif int(inputs[0]) == 6:
-        # TODO modificaciones para el laboratorio 6
-        pass
+        label = input("Libro a buscar: ")
+        books = controller.getBooksName(ctrlr, int(number))
+        printBooksbyYear(books)
+    
 
     elif int(inputs[0]) == 0:
         break

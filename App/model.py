@@ -4,7 +4,7 @@
  *
  *
  * Desarrolado para el curso ISIS1225 - Estructuras de Datos y Algoritmos
- *
+ * 
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -310,7 +310,7 @@ def getBookByTitle(catalog, title):
     """
     Completar la descripcion de getBookByTitle
     """
-    pass
+    return 
 
 
 def booksSize(catalog):
@@ -431,4 +431,9 @@ def compareTitles(title1, title2):
     """
     Completar la descripcion de compareTitles
     """
-    pass
+    if (title1 == title2):
+        return 0
+    elif (title1 > title2):
+        return 1
+    else:
+        return -1

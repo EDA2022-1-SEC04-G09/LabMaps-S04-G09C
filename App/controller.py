@@ -5,7 +5,7 @@
  *
  * Desarrolado para el curso ISIS1225 - Estructuras de Datos y Algoritmos
  *
- *
+ * 
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
  * the Free Software Foundation, either version 3 of the License, or
@@ -160,7 +160,8 @@ def getBooksByTittle(ctrlr, title):
     """
     Completar la descripcion de getBooksByTittle
     """
-    pass
+    books = model.getBookByTitle(ctrlr['model'], title)
+    return books
 
 
 def titlesSize(ctrlr):
